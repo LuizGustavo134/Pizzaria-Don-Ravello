@@ -295,3 +295,77 @@
             color: #aaa;
             margin-top: 10px;
         }
+
+        /* ===== RESPONSIVO - TABLET ===== */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .nav-links a {
+                margin-left: 0;
+                font-size: 14px;
+            }
+
+            .hero {
+                height: 50vh;
+                padding: 0 15px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .pillars {
+                flex-direction: column;
+                margin: -30px auto 30px auto;
+                gap: 15px;
+            }
+
+            .section-title h2 {
+                font-size: 26px;
+            }
+
+            .grid-gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* ===== RESPONSIVO - CELULAR PEQUENO ===== */
+        @media (max-width: 480px) {
+            .logo-container h1 {
+                font-size: 18px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .btn-cta-nav {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+
+            .pizza-img {
+                height: 160px;
+            }
+        }
