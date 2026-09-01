@@ -25,6 +25,11 @@
     justify-content: space-between;
     padding: 14px 0;
     border-bottom: 1px solid rgba(16, 86, 82, 0.15);
+    gap: 12px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
 }
 
 .cart-item-info h4 {
@@ -111,4 +116,60 @@
     text-align: center;
     padding: 40px 0;
     color: #666;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVIDADE DO CARRINHO)
+   ========================================================================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .cart-container {
+        margin: 20px 15px;
+        padding: 18px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .cart-container {
+        margin: 10px 10px;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .cart-container h2 {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .cart-controls {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .cart-controls button {
+        width: 34px; /* Maior área de toque no celular */
+        height: 34px;
+        font-size: 16px;
+    }
+
+    .summary-row {
+        font-size: 14px;
+    }
+
+    .total-row {
+        font-size: 16px;
+    }
+
+    .btn-checkout {
+        padding: 14px;
+        font-size: 16px;
+    }
 }
