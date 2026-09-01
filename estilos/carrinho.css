@@ -1,0 +1,114 @@
+/* =====================================================================
+   ESTILOS DO CARRINHO DE COMPRAS (estilos/carrinho.css)
+====================================================================== */
+
+.cart-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 24px;
+    background: rgb(255, 250, 235);
+    border-radius: 19px;
+    border: 1px solid rgba(16, 86, 82, 0.2);
+    box-shadow: 0px 12px 26px rgba(0, 0, 0, 0.08);
+}
+
+.cart-container h2 {
+    color: rgb(16, 86, 82);
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* Item do Carrinho */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(16, 86, 82, 0.15);
+}
+
+.cart-item-info h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+.cart-item-info span {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(16, 86, 82);
+}
+
+/* Controles de Quantidade */
+.cart-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-controls button {
+    background: rgba(16, 86, 82, 0.1);
+    border: 1px solid rgb(16, 86, 82);
+    color: rgb(16, 86, 82);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cart-controls button:hover {
+    background: rgb(16, 86, 82);
+    color: #ffffff;
+}
+
+.cart-controls .qty {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Resumo do Pedido */
+.cart-summary {
+    margin-top: 24px;
+    padding-top: 16px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #4a4a4a;
+}
+
+.total-row {
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(16, 86, 82);
+    margin-top: 12px;
+}
+
+.btn-checkout {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: rgb(16, 86, 82);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-checkout:hover {
+    background: rgba(16, 86, 82, 0.9);
+}
+
+.cart-empty {
+    text-align: center;
+    padding: 40px 0;
+    color: #666;
+}

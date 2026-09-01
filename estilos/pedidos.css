@@ -1,0 +1,157 @@
+/* =====================================================================
+   PAINEL DE COMANDAS EM ESPERA (estilos/pedidos.css)
+====================================================================== */
+
+.dashboard-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.dashboard-header {
+    margin-bottom: 24px;
+}
+
+.dashboard-header h2 {
+    color: rgb(16, 86, 82);
+    margin-bottom: 6px;
+    font-size: 22px;
+}
+
+.dashboard-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Fila de Cards de Pedidos */
+.orders-queue {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Card Individual de Comanda */
+.order-card {
+    background: rgb(255, 250, 235);
+    border: 1px solid rgba(16, 86, 82, 0.25);
+    border-radius: 12px;
+    padding: 18px 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Destaque para o pedido de maior prioridade (Topo da Fila) */
+.order-card.high-priority {
+    border: 2px solid #d9534f;
+    background: #fffdf9;
+    box-shadow: 0 6px 16px rgba(217, 83, 79, 0.15);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(16, 86, 82, 0.15);
+    padding-bottom: 10px;
+}
+
+.order-id {
+    font-weight: 800;
+    color: rgb(16, 86, 82);
+    font-size: 16px;
+}
+
+.priority-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.priority-tag.high {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.priority-tag.normal {
+    background: rgba(16, 86, 82, 0.1);
+    color: rgb(16, 86, 82);
+}
+
+/* Itens da Comanda */
+.order-items {
+    margin: 4px 0;
+}
+
+.order-item-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #2c2c2c;
+    padding: 4px 0;
+}
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(16, 86, 82, 0.15);
+    padding-top: 12px;
+}
+
+.order-total {
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(16, 86, 82);
+}
+
+/* Botões de Ação do Atendente */
+.order-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-confirm {
+    background: rgb(16, 86, 82);
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-confirm:hover {
+    background: rgba(16, 86, 82, 0.9);
+}
+
+.btn-cancel {
+    background: transparent;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+    background: #d9534f;
+    color: #ffffff;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px 0;
+    color: #777;
+    font-size: 16px;
+}

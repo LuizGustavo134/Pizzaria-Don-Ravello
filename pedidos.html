@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Pedidos - Don'Raville</title>
+    <link rel="stylesheet" href="estilos/index.css">
+    <link rel="stylesheet" href="estilos/pedidos.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Don'Raville - Gestão de Comandas</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="cardapio.html">Ir ao Cardápio</a>
+            <a href="pedidos.html" class="active">Fila de Pedidos (<span id="waiting-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="dashboard-header">
+            <h2>Comandas na Espera (Aguardando Confirmação)</h2>
+            <p>Os pedidos mais antigos possuem **prioridade máxima** (topo da fila).</p>
+        </div>
+
+        <!-- Lista Dinâmica de Comandas -->
+        <div id="orders-queue" class="orders-queue">
+            <!-- Cards de comandas serão renderizados via JS -->
+        </div>
+    </main>
+
+    <script src="scripts/pedidos.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho - Pizzaria Don'Raville</title>
+    <link rel="stylesheet" href="estilos/index.css">
+    <link rel="stylesheet" href="estilos/carrinho.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Pizzaria Don'Raville</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Início</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="carrinho.html" class="btn-cta-nav">Carrinho (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <h2>Seu Pedido</h2>
+
+        <!-- Lista dinâmica dos produtos do carrinho -->
+        <div id="cart-items" class="cart-items">
+            <!-- Os itens serão inseridos aqui via JS -->
+        </div>
+
+        <!-- Resumo financeiro do pedido -->
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="subtotal-price">R$ 0,00</span>
+            </div>
+            <div class="summary-row">
+                <span>Taxa de Entrega:</span>
+                <span>R$ 5,00</span>
+            </div>
+            <hr class="card-divider">
+            <div class="summary-row total-row">
+                <span>Total:</span>
+                <span id="total-price">R$ 5,00</span>
+            </div>
+
+            <button id="btn-checkout" class="btn-checkout" onclick="finalizarPedidoWhatsApp()">
+                Finalizar Pedido via WhatsApp
+            </button>
+        </div>
+    </main>
+
+    <script src="scripts/carrinho.js"></script>
+</body>
+</html>
