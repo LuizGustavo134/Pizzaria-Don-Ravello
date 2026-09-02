@@ -144,7 +144,7 @@ function enviarCarrinhoParaFilaDeEspera() {
     atualizarContadorHeader();
     alert(`Pedido #${novaComanda.id} enviado para a fila de espera!`);
 
-    window.location.href = "pedidos.html";
+    window.location.href = "painel_de_pedidos.html"; // aqui
 }
 
 // Atualiza a contagem no cabeçalho
