@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio - Pizzaria Don'Raville</title>
-    <!-- Use ../ para subir o nivel de permissão quando os arquivos estiverem separados-->
     <link rel="stylesheet" href="../estilos/index.css">
     <link rel="stylesheet" href="../estilos/cardapio.css">
 </head>
@@ -13,7 +12,7 @@
         <div class="logo-container">
             <h1>Pizzaria Don'Raville</h1>
         </div>
-        <nav class="nav-links"><!-- Erro de links-->
+        <nav class="nav-links">
             <a href="../index.html">Início</a> 
             <a href="cardapio.html" class="active">Cardápio</a>
             <a href="painel_de_pedidos.html">Painel de Pedidos</a>
@@ -24,7 +23,7 @@
     </header>
 
     <main class="gallery-container">
-        <!-- CAIXA DE MONTAGEM DE PIZZA POR FRAÇÕES -->
+        <!-- Caixa de montagem de pizza por frações -->
         <div id="builder-box" class="builder-box">
             <div class="builder-header">
                 <h3>Sua Pizza Montada</h3>
@@ -33,7 +32,6 @@
                 </div>
             </div>
 
-            <!-- Lista de frações selecionadas -->
             <div id="selected-flavors-list" class="selected-flavors-list">
                 <p class="empty-msg">Sua pizza está vazia. Escolha 1/2 ou 1/4 dos sabores abaixo.</p>
             </div>
@@ -50,12 +48,27 @@
         </div>
 
         <div class="section-title">
-            <h2>Escolha os Sabores</h2>
+            <h2>Faça seu pedido</h2>
+        </div>
+        
+        <!-- Formulário de dados do cliente (Centralizado) -->
+        <div class="cliente-form">
+            <label for="cliente-nome">Nome</label>
+            <input type="text" id="cliente-nome" class="cliente-input" placeholder="Seu nome completo" required>
+            
+            <label for="cliente-endereco">Endereço de entrega</label>
+            <input type="text" id="cliente-endereco" class="cliente-input" placeholder="Rua, número, bairro" required>
+            
+            <label for="cliente-pagamento">Forma de pagamento</label>
+            <select id="cliente-pagamento" class="cliente-input">
+                <option value="Cartão">Cartão de Crédito/Débito</option>
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Pix">Pix</option>
+            </select>
         </div>
 
+        <!-- Grade de pizzas -->
         <div class="grid-gallery">
-
-            <!-- Card 1 -->
             <div class="pizza-card">
                 <div class="pizza-capa" style="background-image: url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&w=600&q=80');"></div>
                 <div class="pizza-info">
@@ -74,7 +87,6 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
             <div class="pizza-card">
                 <div class="pizza-capa" style="background-image: url('https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80');"></div>
                 <div class="pizza-info">
@@ -93,7 +105,6 @@
                 </div>
             </div>
 
-            <!-- Card 3 -->
             <div class="pizza-card">
                 <div class="pizza-capa" style="background-image: url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80');"></div>
                 <div class="pizza-info">
@@ -112,7 +123,6 @@
                 </div>
             </div>
 
-            <!-- Card 4 -->
             <div class="pizza-card">
                 <div class="pizza-capa" style="background-image: url('https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=600&q=80');"></div>
                 <div class="pizza-info">
@@ -130,7 +140,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
         <div style="text-align: center; margin: 40px 0;">
@@ -138,7 +147,6 @@
                 Enviar Pedido Completo para Fila de Espera
             </button>
         </div>
-
     </main>
 
     <script src="../scripts/carrinho.js"></script>

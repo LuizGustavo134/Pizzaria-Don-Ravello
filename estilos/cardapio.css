@@ -7,9 +7,10 @@
 .section-title h2 {
     color: rgb(16, 86, 82);
     margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Caixa do Montador */
+/* Interface do Montador de Pizza */
 .builder-box {
     background: rgb(255, 250, 235);
     border: 2px dashed rgb(16, 86, 82);
@@ -91,7 +92,54 @@
     margin-left: 6px;
 }
 
-/* Grid de Cards */
+/* Formulário do Cliente Centralizado */
+.cliente-form {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 0 auto 35px auto; /* Centraliza horizontalmente na tela */
+    max-width: 480px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cliente-form label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    color: rgb(16, 86, 82);
+}
+
+.cliente-form label:first-of-type {
+    margin-top: 0;
+}
+
+.cliente-input {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(16, 86, 82, 0.4);
+    background-color: rgb(255, 250, 235);
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.cliente-input:focus {
+    border-color: rgb(16, 86, 82);
+    box-shadow: 0 0 0 2px rgba(16, 86, 82, 0.2);
+}
+
+select.cliente-input {
+    cursor: pointer;
+}
+
+/* Grid e Cards de Pizza */
 .grid-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -190,11 +238,7 @@
     cursor: not-allowed;
 }
 
-/* ==========================================================================
-   MEDIA QUERIES (RESPONSIVIDADE AJUSTADA)
-   ========================================================================== */
-
-/* Tablets e dispositivos médios */
+/* Responsividade */
 @media (max-width: 768px) {
     .gallery-container {
         margin: 15px auto;
@@ -216,7 +260,6 @@
     }
 }
 
-/* Dispositivos móveis pequenos (Celulares) */
 @media (max-width: 480px) {
     .builder-header {
         flex-direction: column;
@@ -224,7 +267,7 @@
     }
 
     .grid-gallery {
-        grid-template-columns: 1fr; /* 1 card por linha */
+        grid-template-columns: 1fr;
     }
 
     .pizza-footer-actions {
@@ -243,7 +286,7 @@
     }
 
     .btn-frac {
-        flex: 1; /* Botões ocupam larguras iguais */
+        flex: 1;
         text-align: center;
     }
 }
