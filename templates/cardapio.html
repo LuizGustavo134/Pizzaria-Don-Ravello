@@ -23,36 +23,13 @@
     </header>
 
     <main class="gallery-container">
-        <!-- Caixa de montagem de pizza por frações -->
-        <div id="builder-box" class="builder-box">
-            <div class="builder-header">
-                <h3>Sua Pizza Montada</h3>
-                <div class="fraction-progress">
-                    <span id="fraction-badge" class="counter-badge">0 / 4 partes (Vazia)</span>
-                </div>
-            </div>
-
-            <div id="selected-flavors-list" class="selected-flavors-list">
-                <p class="empty-msg">Sua pizza está vazia. Escolha 1/2 ou 1/4 dos sabores abaixo.</p>
-            </div>
-
-            <div class="builder-footer">
-                <div class="price-info">
-                    <span>Preço base (Maior valor):</span>
-                    <strong id="custom-pizza-price">R$ 0,00</strong>
-                </div>
-                <button id="btn-add-custom" class="btn-order" onclick="adicionarPizzaMontadaAoCarrinho()" disabled>
-                    Adicionar Pizza Completa ao Carrinho
-                </button>
-            </div>
-        </div>
-
         <div class="section-title">
             <h2>Faça seu pedido</h2>
         </div>
         
-        <!-- Formulário de dados do cliente (Centralizado) -->
-        <div class="cliente-form">
+        <div class="cliente-area">
+            <div class="cliente-form">
+                <h3>Dados do Cliente</h3>
             <label for="cliente-nome">Nome</label>
             <input type="text" id="cliente-nome" class="cliente-input" placeholder="Seu nome completo" required>
             
@@ -65,6 +42,24 @@
                 <option value="Dinheiro">Dinheiro</option>
                 <option value="Pix">Pix</option>
             </select>
+            </div>
+
+            <div class="three-d-card" tabindex="0" aria-label="Informações sobre o pedido">
+                <div class="card-wrapper">
+                    <div class="card-face front">
+                        <div class="card-content">
+                            <div class="card-title">Seu pedido, do seu jeito</div>
+                            <div class="card-description">Preencha seus dados e escolha os sabores que vão para a sua mesa.</div>
+                        </div>
+                    </div>
+                    <div class="card-face back">
+                        <div class="card-content">
+                            <div class="card-title">Entrega cuidadosa</div>
+                            <div class="card-description">Seus dados são usados para identificar o pedido e fazer a entrega corretamente.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Grade de pizzas -->
@@ -139,6 +134,30 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Caixa de montagem de pizza por frações -->
+        <div id="builder-box" class="builder-box" style="margin-top: 30px;">
+            <div class="builder-header">
+                <h3>Sua Pizza Montada</h3>
+                <div class="fraction-progress">
+                    <span id="fraction-badge" class="counter-badge">0 / 4 partes (Vazia)</span>
+                </div>
+            </div>
+
+            <div id="selected-flavors-list" class="selected-flavors-list">
+                <p class="empty-msg">Sua pizza está vazia. Escolha 1/2 ou 1/4 dos sabores acima.</p>
+            </div>
+
+            <div class="builder-footer">
+                <div class="price-info">
+                    <span>Preço base (Maior valor):</span>
+                    <strong id="custom-pizza-price">R$ 0,00</strong>
+                </div>
+                <button id="btn-add-custom" class="btn-order" onclick="adicionarPizzaMontadaAoCarrinho()" disabled>
+                    Adicionar Pizza Completa ao Carrinho
+                </button>
             </div>
         </div>
 
