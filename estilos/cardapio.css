@@ -19,6 +19,10 @@
     margin-bottom: 30px;
 }
 
+.builder-box-offset {
+    margin-top: 30px;
+}
+
 .builder-header {
     display: flex;
     justify-content: space-between;
@@ -177,6 +181,21 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+.btn-header-order {
+    border: none;
+    cursor: pointer;
+}
+
+.pedido-submit-wrapper {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn-order-large {
+    padding: 16px 32px;
+    font-size: 16px;
+}
+
 .cliente-form label {
     display: block;
     margin-top: 14px;
@@ -261,7 +280,13 @@ select.cliente-input {
     height: 160px;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
+
+.pizza-capa-1 { background-image: url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&w=600&q=80'); }
+.pizza-capa-2 { background-image: url('https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80'); }
+.pizza-capa-3 { background-image: url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80'); }
+.pizza-capa-4 { background-image: url('https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=600&q=80'); }
 
 .pizza-info {
     padding: 15px;
@@ -333,11 +358,32 @@ select.cliente-input {
     border-radius: 6px;
     font-weight: 700;
     cursor: pointer;
+    box-shadow: 0 6px 16px rgba(16, 86, 82, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-order:hover:not(:disabled) {
+    transform: translateY(-1px);
+    background: rgb(16, 86, 82);
+    box-shadow: 0 10px 20px rgba(16, 86, 82, 0.22);
+    filter: brightness(1.03);
 }
 
 .btn-order:disabled {
     background: #ccc;
     cursor: not-allowed;
+    box-shadow: none;
+}
+
+.btn-order-large {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    border-radius: 10px;
+    padding: 16px 32px;
+    font-size: 16px;
+    letter-spacing: 0.02em;
 }
 
 /* Responsividade */

@@ -56,6 +56,16 @@
             background-color: #96321b;
         }
 
+        .btn-hero {
+            background-color: #b73e23;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(183, 62, 35, 0.4);
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
@@ -176,6 +186,11 @@
             background-size: cover;
             background-position: center;
         }
+
+        .pizza-img-1 { background-image: url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&w=600&q=80'); }
+        .pizza-img-2 { background-image: url('https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80'); }
+        .pizza-img-3 { background-image: url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80'); }
+        .pizza-img-4 { background-image: url('https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=600&q=80'); }
 
         .pizza-info {
             padding: 20px;

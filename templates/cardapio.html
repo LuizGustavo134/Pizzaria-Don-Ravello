@@ -13,12 +13,10 @@
             <h1>Pizzaria Don'Raville</h1>
         </div>
         <nav class="nav-links">
-            <a href="../index.html">Início</a> 
+            <a href="../index.html">Início</a>
             <a href="cardapio.html" class="active">Cardápio</a>
-            <a href="painel_de_pedidos.html">Painel de Pedidos</a>
-            <button onclick="enviarCarrinhoParaFilaDeEspera()" class="btn-cta-nav" style="border:none; cursor:pointer;">
-                Finalizar e Enviar Pedido (<span id="cart-count">0</span>)
-            </button>
+            <a href="painel_de_pedidos.html">Painel</a>
+            <a href="producao.html">Produção</a>
         </nav>
     </header>
 
@@ -29,7 +27,7 @@
         
         <div class="cliente-area">
             <div class="cliente-form">
-                <h3>Dados do Cliente</h3>
+                <h3>Sua Comanda</h3>
             <label for="cliente-nome">Nome</label>
             <input type="text" id="cliente-nome" class="cliente-input" placeholder="Seu nome completo" required>
             
@@ -65,7 +63,7 @@
         <!-- Grade de pizzas -->
         <div class="grid-gallery">
             <div class="pizza-card">
-                <div class="pizza-capa" style="background-image: url('https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="pizza-capa pizza-capa-1"></div>
                 <div class="pizza-info">
                     <div class="pizza-body">
                         <h4>Margherita Suprema</h4>
@@ -83,7 +81,7 @@
             </div>
 
             <div class="pizza-card">
-                <div class="pizza-capa" style="background-image: url('https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="pizza-capa pizza-capa-2"></div>
                 <div class="pizza-info">
                     <div class="pizza-body">
                         <h4>Calabresa Especial</h4>
@@ -101,7 +99,7 @@
             </div>
 
             <div class="pizza-card">
-                <div class="pizza-capa" style="background-image: url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="pizza-capa pizza-capa-3"></div>
                 <div class="pizza-info">
                     <div class="pizza-body">
                         <h4>Frango com Catupiry</h4>
@@ -119,7 +117,7 @@
             </div>
 
             <div class="pizza-card">
-                <div class="pizza-capa" style="background-image: url('https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="pizza-capa pizza-capa-4"></div>
                 <div class="pizza-info">
                     <div class="pizza-body">
                         <h4>Quatro Queijos Premium</h4>
@@ -138,7 +136,7 @@
         </div>
 
         <!-- Caixa de montagem de pizza por frações -->
-        <div id="builder-box" class="builder-box" style="margin-top: 30px;">
+        <div id="builder-box" class="builder-box builder-box-offset">
             <div class="builder-header">
                 <h3>Sua Pizza Montada</h3>
                 <div class="fraction-progress">
@@ -161,8 +159,8 @@
             </div>
         </div>
 
-        <div style="text-align: center; margin: 40px 0;">
-            <button onclick="enviarCarrinhoParaFilaDeEspera()" class="btn-order" style="padding: 16px 32px; font-size: 16px;">
+        <div class="pedido-submit-wrapper">
+            <button onclick="enviarCarrinhoParaFilaDeEspera()" class="btn-order btn-order-large">
                 Enviar Pedido Completo para Fila de Espera
             </button>
         </div>

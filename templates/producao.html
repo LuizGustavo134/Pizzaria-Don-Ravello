@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produção - Don'Raville</title>
+
+    <link rel="stylesheet" href="../estilos/index.css">
+    <link rel="stylesheet" href="../estilos/painel_de_pedidos.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo-container">
+            <h1>Don'Raville - Produção</h1>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="cardapio.html">
+                Ir ao Cardápio
+            </a>
+
+            <a href="painel_de_pedidos.html">
+                Painel
+            </a>
+
+            <a href="producao.html" class="active">
+                Produção
+                (<span id="waiting-count">0</span>)
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="dashboard-container">
+
+        <div class="dashboard-header">
+
+            <h2>
+                Comandas na Espera
+            </h2>
+
+            <p>
+                Os pedidos mais antigos possuem prioridade máxima.
+            </p>
+
+        </div>
+
+
+        <!-- Os pedidos serão inseridos pelo JavaScript -->
+        <div id="orders-queue" class="orders-queue"></div>
+
+    </main>
+
+
+    <script src="../scripts/carrinho.js"></script>
+
+</body>
+
+</html>

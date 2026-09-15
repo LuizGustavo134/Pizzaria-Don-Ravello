@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfbf7;
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container h1 {
+    color: #f2a65a;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f2a65a;
+}
+
+.main-container {
+    width: 100%;
+    margin: 50px auto 60px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    min-height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.wrapper {
+    --input-focus: #e28743;
+    --font-color: #26352f;
+    --font-color-sub: #527064;
+    --bg-color: #ffffff;
+    --bg-color-alt: #666666;
+    --main-color: #23805b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card-switch {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.switch {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 330px;
+    min-height: 440px;
+    padding-top: 12px;
+    margin: 0 auto;
+}
+
+.switch .toggle {
+    display: none;
+}
+
+.card-side {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 24px 0 24px;
+    margin-bottom: 12px;
+    z-index: 2;
+    color: var(--font-color);
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.card-side::before,
+.card-side::after {
+    content: attr(data-label);
+    display: block;
+    opacity: 0.7;
+    transition: opacity 0.25s ease, text-decoration 0.25s ease;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+}
+
+.card-side::before { content: 'Login'; }
+.card-side::after { content: 'Cadastro'; }
+
+.toggle {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 28px;
+    opacity: 0;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.slider {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    position: absolute;
+    cursor: pointer;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 28px;
+    background-color: var(--bg-color);
+    transition: 0.3s;
+    z-index: 3;
+}
+
+.slider:before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    left: 2px;
+    top: 1px;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 0 var(--main-color);
+    transition: 0.3s;
+}
+
+.toggle:checked + .slider {
+    background-color: var(--input-focus);
+}
+
+.toggle:checked + .slider:before {
+    transform: translateX(42px);
+}
+
+.toggle:checked ~ .card-side::before {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.toggle:checked ~ .card-side::after {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.flip-card__inner {
+    width: 320px;
+    height: 380px;
+    position: relative;
+    background-color: transparent;
+    perspective: 1000px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    margin-top: 16px;
+}
+
+.toggle:checked ~ .flip-card__inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card__front,
+.flip-card__back {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: #ffffff;
+    gap: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    box-sizing: border-box;
+}
+
+.flip-card__back {
+    transform: rotateY(180deg);
+}
+
+.flip-card__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+}
+
+.title {
+    margin: 16px 0 12px 0;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.flip-card__input {
+    width: 100%;
+    max-width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    background-color: #fffaf0;
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: #174c38;
+    padding: 5px 10px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.flip-card__input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+}
+
+.flip-card__input:focus {
+    border: 2px solid #000000;
+}
+
+.flip-card__btn:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+}
+
+.flip-card__btn {
+    margin: 20px 0 20px 0;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.flip-card__btn:hover {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+.flip-switch-container {
+    --card-width: 110px;
+    --card-height: 120px;
+    --switch-bg: #ffffff;
+    --switch-border-color: rgba(35, 128, 91, 0.35);
+    --text-color: #ffffff;
+    --inactive-text-color: rgba(255, 255, 255, 0.75);
+    --icon-shadow-color: rgba(255, 255, 255, 0.35);
+    --card-bg: linear-gradient(135deg, #23805b, #174c38);
+    --highlight-color: #e28743;
+    display: grid;
+    place-content: center;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: 8px;
+}
+
+.flip-switch {
+    display: flex;
+    position: relative;
+    width: calc(var(--card-width) * 2);
+    height: var(--card-height);
+    background: var(--switch-bg);
+    border-radius: 20px;
+    border: 1px solid var(--switch-border-color);
+    box-shadow: 0 8px 24px rgba(35, 128, 91, 0.18), inset 0 4px 8px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    perspective: 1000px;
+}
+
+.flip-switch input[type="radio"] {
+    display: none;
+}
+
+.flip-switch .switch-button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    z-index: 2;
+    color: var(--inactive-text-color);
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+
+.flip-switch .switch-button:hover {
+    color: var(--text-color);
+}
+
+.flip-switch .switch-button:hover svg {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 4px 6px var(--icon-shadow-color)) brightness(1.2);
+}
+
+.flip-switch .switch-button svg {
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    filter: drop-shadow(0 2px 3px var(--icon-shadow-color));
+    width: 24px;
+    height: 24px;
+}
+
+.flip-switch .switch-button span {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.flip-switch #switch-opt-1:checked ~ [for="switch-opt-1"],
+.flip-switch #switch-opt-2:checked ~ [for="switch-opt-2"] {
+    color: var(--text-color);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.flip-switch #switch-opt-1:checked ~ [for="switch-opt-2"],
+.flip-switch #switch-opt-2:checked ~ [for="switch-opt-1"] {
+    color: var(--inactive-text-color);
+    background: #666666;
+    border-radius: 18px;
+    text-shadow: none;
+}
+
+.flip-switch .switch-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--card-width);
+    height: var(--card-height);
+    z-index: 1;
+    transform-style: preserve-3d;
+}
+
+.flip-switch .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-switch .card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-switch #switch-opt-2:checked ~ .switch-card {
+    animation: flipRight 0.6s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.flip-switch #switch-opt-1:checked ~ .switch-card {
+    animation: flipLeft 0.6s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes flipRight {
+    0% { transform: translateX(0%) rotateY(0deg); }
+    50% { transform: translateX(50%) rotateY(90deg) scale(1.05); }
+    100% { transform: translateX(100%) rotateY(180deg) scale(1); }
+}
+
+@keyframes flipLeft {
+    0% { transform: translateX(100%) rotateY(180deg); }
+    50% { transform: translateX(50%) rotateY(90deg) scale(1.05); }
+    100% { transform: translateX(0%) rotateY(0deg) scale(1); }
+}
+
+.flip-switch #switch-opt-1:checked ~ [for="switch-opt-1"]::after,
+.flip-switch #switch-opt-2:checked ~ [for="switch-opt-2"]::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 30px;
+    height: 3px;
+    background: var(--highlight-color);
+    border-radius: 2px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 5px var(--highlight-color); }
+    to { box-shadow: 0 0 15px var(--highlight-color), 0 0 25px var(--highlight-color); }
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    .switch {
+        width: 290px;
+    }
+
+    .flip-card__inner {
+        width: 280px;
+        height: 360px;
+    }
+
+    .card-side {
+        padding: 0 12px;
+    }
+
+    .flip-switch {
+        transform: scale(0.9);
+    }
+}

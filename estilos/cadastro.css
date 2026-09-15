@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfbf7;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container h1 {
+    color: #e28743;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e28743;
+}
+
+.main-container {
+    max-width: 450px;
+    width: 100%;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.form-section {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-top: 4px solid #e28743;
+}
+
+.form-section h2 {
+    font-size: 22px;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #e28743;
+}
+
+.btn-submit {
+    background-color: #e28743;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #c76f30;
+}
+
+.switch-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #555;
+}
+
+.switch-link a {
+    color: #e28743;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+}

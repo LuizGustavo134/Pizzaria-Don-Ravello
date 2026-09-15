@@ -182,6 +182,10 @@ function carregarPedidos() {
 
     const countBadge = document.getElementById('waiting-count');
 
+    const paginaProducao = window.location.pathname
+        .toLowerCase()
+        .includes('producao');
+
     const pedidos =
         JSON.parse(
             localStorage.getItem('pedidos_em_espera')
@@ -262,10 +266,6 @@ function carregarPedidos() {
                 <!-- CLIENTE -->
 
                 <div class="customer-section">
-
-                    <h4>
-                        Dados do Cliente
-                    </h4>
 
                     <div class="customer-data">
 
@@ -419,14 +419,15 @@ function carregarPedidos() {
 
                     <div class="order-actions">
 
-                        <button
-                            onclick="concluirPedido(${index})"
-                            class="btn-confirm">
+                        ${paginaProducao ? `
+                            <button
+                                onclick="concluirPedido(${index})"
+                                class="btn-confirm">
 
-                            Concluir Comanda
+                                Concluir Comanda
 
-                        </button>
-
+                            </button>
+                        ` : ''}
 
                         <button
                             onclick="cancelarPedido(${index})"
