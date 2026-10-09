@@ -26,8 +26,10 @@
         <p>Ingredientes selecionados, massa de longa fermentação e aquele sabor inconfundível que você só encontra aqui.</p>
         <a href="templates/cardapio.html" class="btn-hero"> Faça seu pedido </a>
     </section>
-    <!-- Marketing Pillars -->
-    <section class="pillars">
+    <!-- Vitrine em movimento com os diferenciais e as ofertas da pizzaria. -->
+    <section class="pillars-section">
+    <!-- scrollamount controla a velocidade dos cards: quanto maior, mais rápido. -->
+    <marquee class="pillars-marquee" behavior="scroll" direction="left" scrollamount="6">
         <div class="pillar-card">
             <h3>Qualidade</h3>
             <p>Produtos 100% frescos, farinha importada e molho artesanal feito com tomates selecionados todos os dias.</p>
@@ -40,7 +42,14 @@
             <h3>Preço Acessível</h3>
             <p>O melhor custo-benefício da região. Sabores extraordinários que cabem perfeitamente no seu bolso.</p>
         </div>
+
+        <div class="pillar-card">
+            <h3>Oferta Especial</h3>
+            <p>Peça qualquer pizza com mais de 1 sabor e ganhe 10% de desconto em sua próxima compra!</p>
+        </div>
+    </marquee>
     </section>
+   
     <!-- Pizza Gallery Section -->
     <section class="gallery-container" id="cardapio">
         <div class="section-title">
@@ -131,5 +140,14 @@
             <p class="copyright">© 2026 Pizzaria Don'Raville. Todos os direitos reservados. Desenvolvido com foco em alta performance.</p>
         </div>
     </footer>
+    <script>
+        const pillarsMarquee = document.querySelector(".pillars-marquee");
+
+        // Pausa os cards quando o mouse entra em um deles e retoma quando sai.
+        pillarsMarquee.querySelectorAll(".pillar-card").forEach((card) => {
+            card.addEventListener("mouseenter", () => pillarsMarquee.stop());
+            card.addEventListener("mouseleave", () => pillarsMarquee.start());
+        });
+    </script>
 </body>
 </html>
